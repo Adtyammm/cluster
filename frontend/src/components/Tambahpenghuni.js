@@ -45,7 +45,7 @@ function Tambahpenghuni(){
                     <input type="text" className="inps" name="username" value={username} onChange={(e)=>{setusername(e.target.value);}}></input>
                     <p className="pw">Password</p>
                     <input type="text" className="inpw" name="password" value={password} onChange={(e)=>{setpassword(e.target.value);}}></input>
-                    <button className="tambah" onClick={addPenghuni}>
+                    <button className="kirim" onClick={addPenghuni}>
                  Tambah Penghuni
                 </button>
                     </form>

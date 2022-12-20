@@ -19,18 +19,25 @@ class Tagihan extends React.Component{
                 </div>
                 <div className="metode">
                     <h2 className="Metode-title">Metode Pembayaran</h2>
-                    <p className="BCA"><input type="radio" name="bank" value="BCA"/>BCA</p>
-                    <p className="BRI"><input type="radio" name="bank" value="BRI"/>BRI</p>
-                    <p className="Mandiri"><input type="radio" name="bank" value="Mandiri"/>Mandiri</p>
+                    <ul>
+                        <li>
+                        <p className="BCA">BCA</p>
+                        </li>
+                        <li>
+                        <p className="BRI">BRI</p>
+                        </li>
+                        <li>
+                        <p className="Mandiri">Mandiri</p>
+                        </li>
+                    </ul>
                 </div>
                 <div className="form-bayar">
                     <h2 className="bayar-title">Pembayaran</h2>
                     <p className="rek">No rekening</p>
-                    <p className="norek">Nomor</p>
-                    <p className="penerima">Atas Nama</p>
-                    <p className="nama-penerima">Nama</p>
+                    <p className="penerima">Nama</p>
+                    <input></input>
                     <p className="ket-jml">Jumlah Pembayaran</p>
-                    <p className="jml-bayar">Rp.01010</p>
+                    <input></input>
                     <p className="unggah">unggah bukti pembayaran</p>
                         <input type="file" class="btn-2" id="file" />
                     <button className="confirm-btn">Konfirmasi Pembayaran</button>

@@ -21,9 +21,11 @@
 }
 
 .rincian-title{
+  font-family: "Open Sans";
   position: absolute;
-  height: 24px;
+  height: 30px;
   left: 250px;
+  color: #ffffff;
 }
 
 .tagihan-air{
@@ -34,6 +36,7 @@
   top: 55px;
   color: white;
   font-style: normal;
+  font-family: "Open Sans";
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -171,6 +174,7 @@
 }
 
 .BCA{
+  list-style: none;
   position: absolute;
   width: 340px;
   height: 24px;
@@ -188,6 +192,7 @@
 }
 
 .BRI{
+  list-style: none;
   position: absolute;
   width: 340px;
   height: 24px;
@@ -314,7 +319,7 @@
 
 .ket-jml{
   position: absolute;
-  width: 200px;
+  width: 400px;
   height: 24px;
   left: 50px;
   top: 305px;

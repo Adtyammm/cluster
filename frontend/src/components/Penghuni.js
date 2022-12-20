@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import Sidebar from "./sidebar";
+import '../style/penghuni.css';
 
 
 function Penghuni() {
@@ -37,9 +38,9 @@ function Penghuni() {
         <h1 className="sh">Daftar Penghuni</h1>
         <table>
           <thead>
-            <tr className="up">
-              <td className="no">ID</td>
-              <td className="name">Nama</td>
+            <tr className="usp1">
+              <td className="no">No</td>
+              <td className="namest">Nama</td>
               <td className="telp">No Telepon</td>
               <td className="rmh">No Rumah</td>
               <td className="srn">Username</td>
@@ -49,26 +50,25 @@ function Penghuni() {
           </thead>
           <tbody>
             {penghuni &&
-              penghuni.map((penghuni) => {
+              penghuni.map((penghuni, index) => {
                 return (
-                  <tr>
-                    <td className="user">{penghuni._id}</td>
-                    <td className="user">{penghuni.nama}</td>
-                    <td className="user">{penghuni.telp}</td>
-                    <td className="user">{penghuni.rumah}</td>
-                    <td className="user">{penghuni.username}</td>
-                    <td className="user">{penghuni.password}</td>
+                  <tr className="trah">
+                    <td className="user1">{index + 1}</td>
+                    <td className="nma">{penghuni.nama}</td>
+                    <td className="tlp">{penghuni.telp}</td>
+                    <td className="rumh">{penghuni.rumah}</td>
+                    <td className="usname">{penghuni.username}</td>
+                    <td className="pwa">{penghuni.password}</td>
                     <td>
-                      <a className="lh">Edit</a>
                       <button
-                        className="hapus"
+                        className="haps"
                         onClick={() => hapuspenghuni(penghuni._id)}
                       >
                         Hapus
                       </button>
                       <Link
                         to={`editpenghuni/${penghuni._id}`}
-                        className="button is-info is-small mr-1"
+                        className="edt"
                       >
                         Edit
                       </Link>

@@ -43,11 +43,11 @@ function Berita()  {
           <Link to={"/Tambahberita"} class="upl">Buat Berita Baru</Link>
           <div className="table">
             <table>
-              <thead>
-                <tr class="up">
+              <thead className="upst1">
+                <tr class="upst">
                   <td className="no">No</td>
-                  <td className="name">Judul</td>
-                  <td className="ket">Action</td>
+                  <td className="names">Judul</td>
+                  <td className="kets">Action</td>
                 </tr>
               </thead>
               <tbody>
