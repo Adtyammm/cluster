@@ -1,60 +1,77 @@
-import React, {useState,useEffect}  from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import Sidebar from "./sidebar";
 import "../style/eb.css"
 function Eberita() {
-  function Editpenghuni(){
-    const [judul, setjudul] = useState();
-    const [isi, setisi] = useState();
-    const {id} = useParams();
-   
-    useEffect(() => {
-        getBeritaById();
-      }, []);
-            const getBeritaById = async()=>{
-            const res = await axios.get(`/api/berita/getberitaById/${id}`);
-            setjudul(res.data.judul);
-            setisi(res.data.isi);
-            console.log(getBeritaById)
-          } 
+  const [judul, setjudul] = useState();
+  const [isi, setisi] = useState();
+  const {id} = useParams();
+
+  useEffect(() => {
+    getBeritaById();
+  }, []);
 
 
-      const editberita = async(e) =>{
-        await axios.patch(`/api/berita/editberita/${id}`, {
-            judul,
-            isi,
-        });
-        window.location.href = "/berita";
-      };
+  const getBeritaById = async () => {
+    const res = await axios.get(`/api/berita/getberitaById/${id}`);
+    setjudul(res.data.judul);
+    setisi(res.data.isi);
+    console.log(getBeritaById);
+  };
+
+  const editberita = async (e) => {
+    await axios.patch(`/api/berita/editberita/${id}`, {
+      judul,
+      isi,
+    });
+    window.location.href = "/Berita";
+  };
+
+  return (
     
-        return(
-        <div class="conb">
-          <div className="sidebar">
-                <Sidebar/>
-            </div>
-        <div className="body">
-        <div className="container">
-            <form action="/upload-berita" method="post">
+    <div class="conb">
+      <div className="body">
+      <div>
+          <Sidebar/>
+        </div>
+        </div>
+        <div>
+          <form>
             <h1 class="shk">Edit Berita</h1>
             <div class="jube">
-            <p >Judul Berita</p>
+              <p>Judul Berita</p>
             </div>
-            <input type="text" className="inpnj" name="judul_berita" value={judul} onChange={(e)=>{setjudul(e.target.value);}}></input>
+            <input
+              type="text"
+              className="inpnj"
+              name="judul_berita"
+              value={judul}
+              onChange={(e) => {
+                setjudul(e.target.value);
+              }}
+            ></input>
             <div>
-            <p class="isi">Isi</p>
+              <p class="isi">Isi</p>
             </div>
             <div>
-            <p><textarea class="inpii" name="isi_berita" rows="10" cols="30"></textarea></p>
+              <p>
+                <textarea
+                  class="inpii"
+                  name="isi_berita"
+                  value={isi}
+                  onChange={(e) => {
+                    setisi(e.target.value);
+                  }}
+                ></textarea>
+              </p>
             </div>
-            <input type='submit' class="kirimm" name='tombol' value='Upload berita' />
-            </form>
+            <button className="send" onClick={editberita}>Edit Berita</button>
+          </form>
         </div>
-        </div>
-        </div>
+      </div>
 
-        );
-    }
-  }
+  );
+}
 
 export default Eberita;

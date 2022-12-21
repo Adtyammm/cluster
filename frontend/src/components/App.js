@@ -25,7 +25,7 @@ function App() {
           <Route path="/Pesan" element={<Pesan/>}/>
           <Route path="/Berita" element={<Berita/>}/>
           <Route path="/TambahBerita" element={<Tberita/>}/>
-          <Route path="/editberita" element={<Eberita/>}/>
+          <Route path="/Berita/Eberita/:id" element={<Eberita/>}/>
         </Routes>
       </BrowserRouter>
     </div>

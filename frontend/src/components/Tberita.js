@@ -31,7 +31,7 @@ function Tberita() {
 
       <div class="conb">
         <form>
-          <h1 class="sh">Buat Berita</h1>
+          <h1 class="shkt">Buat Berita</h1>
           <div class="jube">
             <p>Judul Berita</p>
           </div>
@@ -51,7 +51,7 @@ function Tberita() {
               ></textarea>
             </p>
           </div>
-          <button className="kirim" onClick={addBerita}>
+          <button className="send" onClick={addBerita}>
             Tambah Berita
           </button>
         </form>

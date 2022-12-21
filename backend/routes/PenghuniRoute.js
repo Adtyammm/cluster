@@ -6,7 +6,7 @@ const Penghuni = require("../models/PenghuniModel");
 router.get("/getallpenghuni", async (req, res) => {
     try {
       const penghuni = await Penghuni.find({});
-      res.send(penghuni);
+      res.send({penghuni:penghuni.length});
     } catch (err) {
       return res.status(400).json({ message: err });
     }

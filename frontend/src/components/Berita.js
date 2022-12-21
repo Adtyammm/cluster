@@ -34,7 +34,7 @@ function Berita()  {
                 <Sidebar/>
             </div>
         <div class="con">
-          <div className="sh">
+          <div className="sha">
             <h1>Berita</h1>
           </div>
           <div className="shh">
@@ -57,13 +57,17 @@ function Berita()  {
                 <tr>
                   <td class="usr1">{index + 1}</td>
                   <td class="usr2">{berita.judul}</td>
-                  <td>
-                    {" "}
-                    <a class="lh">Edit</a>
-                  </td>
-                  <td>
+                  <td className="ac">
+                    <Link
+                        to={`Eberita/${berita._id}`}
+                        className="lh"
+                      >
+                        Edit
+                      </Link>
+                  
+                 
                     <button class="ed" onClick={() => hapusberita(berita._id)}>Hapus</button>
-                  </td>
+                    </td>
                 </tr>
                 )
               })}
