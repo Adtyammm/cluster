@@ -1,34 +1,60 @@
-import React from "react";
+import React, {useState,useEffect}  from "react";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from "./sidebar";
-class Eberita extends React.Component {
-    render(){
+import "../style/eb.css"
+function Eberita() {
+  function Editpenghuni(){
+    const [judul, setjudul] = useState();
+    const [isi, setisi] = useState();
+    const {id} = useParams();
+   
+    useEffect(() => {
+        getBeritaById();
+      }, []);
+            const getBeritaById = async()=>{
+            const res = await axios.get(`/api/berita/getberitaById/${id}`);
+            setjudul(res.data.judul);
+            setisi(res.data.isi);
+            console.log(getBeritaById)
+          } 
+
+
+      const editberita = async(e) =>{
+        await axios.patch(`/api/berita/editberita/${id}`, {
+            judul,
+            isi,
+        });
+        window.location.href = "/berita";
+      };
+    
         return(
-        <div className="body">
-        <div className="container">
-        <div className="sidebar">
+        <div class="conb">
+          <div className="sidebar">
                 <Sidebar/>
             </div>
-        <div class="conb">
+        <div className="body">
+        <div className="container">
             <form action="/upload-berita" method="post">
-            <h1 class="sh">Buat Berita</h1>
+            <h1 class="shk">Edit Berita</h1>
             <div class="jube">
             <p >Judul Berita</p>
             </div>
-            <input name="judul_berita"  type="text" class="inpn"/>
+            <input type="text" className="inpnj" name="judul_berita" value={judul} onChange={(e)=>{setjudul(e.target.value);}}></input>
             <div>
             <p class="isi">Isi</p>
             </div>
             <div>
-            <p><textarea class="inpi" name="isi_berita" rows="10" cols="30"></textarea></p>
+            <p><textarea class="inpii" name="isi_berita" rows="10" cols="30"></textarea></p>
             </div>
-            <input type='submit' class="kirim" name='tombol' value='Upload berita' />
+            <input type='submit' class="kirimm" name='tombol' value='Upload berita' />
             </form>
         </div>
         </div>
         </div>
-        
+
         );
     }
-}
+  }
 
 export default Eberita;

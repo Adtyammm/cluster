@@ -35,7 +35,7 @@ function Tberita() {
           <div class="jube">
             <p>Judul Berita</p>
           </div>
-          <input name="judul_berita" type="text" class="inpn" value={judul} onChange={(e)=>{setjudul(e.target.value);}}></input>
+          <input name="judul_berita" type="text" class="inpnb" value={judul} onChange={(e)=>{setjudul(e.target.value);}}></input>
           <div>
             <p class="isi">Isi</p>
           </div>

@@ -185,12 +185,12 @@
     color: #090909;
   }
   
-  .inpn {
+  .inpnb {
     position: absolute;
     width: 574px;
-    height: 58px;
+    height: 45px;
     left: 245px;
-    top: 133px;
+    top: 140px;
   
     color: #496ecb;
     background: #d9d9d9;

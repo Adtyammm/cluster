@@ -1,0 +1,117 @@
+
+  .shk {
+    position: absolute;
+    width: 303px;
+    height: 24px;
+    left: 240px;
+    top: 25px;
+  
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+    /* identical to box height, or 85% */
+  
+    color: #3159c2;
+  }
+  
+  .jube {
+    position: absolute;
+    width: 139px;
+    height: 32px;
+    left: 245px;
+    top: 90px;
+  
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 118% */
+  
+    color: #090909;
+  }
+  
+  .inpnj {
+    position: absolute;
+    width: 574px;
+    height: 45px;
+    left: 245px;
+    top: 140px;
+  
+    color: #496ecb;
+    background: #d9d9d9;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px;
+    border-color: white;
+  }
+  
+  
+  
+  .isi {
+    position: absolute;
+    width: 139px;
+    height: 32px;
+    left: 245px;
+    top: 220px;
+  
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* or 118% */
+  
+    color: #090909;
+  }
+  
+  .inpii {
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    left: 245px;
+    top: 265px;
+  
+    color: #496ecb;
+    background: #d9d9d9;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px;
+  }
+  
+  
+  .kirimm {
+    position: absolute;
+    width: 219px;
+    height: 44px;
+    left: 1030px;
+    top: 600px;
+  
+    background: #3159c2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+    border-radius: 25px;
+    color: white;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    border-color: white;
+  }
+ 

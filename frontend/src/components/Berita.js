@@ -62,7 +62,7 @@ function Berita()  {
                     <a class="lh">Edit</a>
                   </td>
                   <td>
-                    <a class="ed">Hapus</a>
+                    <button class="ed" onClick={() => hapusberita(berita._id)}>Hapus</button>
                   </td>
                 </tr>
                 )
