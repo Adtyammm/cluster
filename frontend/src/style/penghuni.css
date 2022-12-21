@@ -2,7 +2,22 @@
   margin-top: 20px;
 }
 
-
+.sh4{
+    position: absolute;
+    width: 253px;
+    height: 24px;
+    left: 235px;
+    top: 25px;
+  
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+    /* identical to box height, or 85% */
+  
+    color: #3159c2;
+}
 .nma{
   position: absolute;
   font-family: "Poppins";
@@ -105,3 +120,27 @@
   background: #1d4ed8;
   border-radius: 3px;
 }
+
+.tph1 {
+  text-decoration: none;
+    position: absolute;
+    width: 180px;
+    height: 30px;
+    left: 1150px;
+    top: 80px;
+  
+    background: #3159c2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.11);
+    border-radius: 25px;
+    color: white;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: white;
+  }

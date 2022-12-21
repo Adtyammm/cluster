@@ -6,7 +6,15 @@
 }
 
 
+.logos{
+  margin-left: 300px;
+}
 
+.hil{
+  font-family: "Open Sans";
+  color: #3159c2;
+  margin-left: 300px;
+}
 
 .rincian{
   position: absolute;
@@ -162,11 +170,13 @@
 }
 
 .Metode-title{
+  top: 20px;
   position: absolute;
   width: 250px;
   height: 24px;
   left: 210px;
   font-style: normal;
+  font-family: "Open Sans";
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
@@ -178,7 +188,25 @@
   position: absolute;
   width: 340px;
   height: 24px;
-  left: 75px;
+  left: 135px;
+  top: 105px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 118% */
+
+  color: #ffffff;
+}
+
+.BCAA{
+  list-style: none;
+  position: absolute;
+  width: 340px;
+  height: 24px;
+  left: 375px;
   top: 105px;
 
   font-family: "Open Sans";
@@ -196,7 +224,25 @@
   position: absolute;
   width: 340px;
   height: 24px;
-  left: 75px;
+  left: 135px;
+  top: 150px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 118% */
+
+  color: #ffffff;
+}
+
+.BRII{
+  list-style: none;
+  position: absolute;
+  width: 340px;
+  height: 24px;
+  left: 375px;
   top: 150px;
 
   font-family: "Open Sans";
@@ -213,7 +259,25 @@
   position: absolute;
   width: 340px;
   height: 24px;
-  left: 75px;
+  left: 135px;
+  top: 195px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 118% */
+
+  color: #ffffff;
+}
+
+.MANDIRII{
+  list-style: none;
+  position: absolute;
+  width: 340px;
+  height: 24px;
+  left: 375px;
   top: 195px;
 
   font-family: "Open Sans";
@@ -228,10 +292,10 @@
 
 .form-bayar{
   position: absolute;
-  width: 657px;
-  height: 657px;
+  width: 457px;
+  height: 477px;
   left: 1000px;
-  top: 164px;
+  top: 264px;
 
   background: #ffffff;
   box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.25);
@@ -242,7 +306,7 @@
   position: absolute;
   width: 152px;
   height: 24px;
-  left: 270px;
+  left: 140px;
   top: 5px;
   font-family: "Open Sans";
   font-style: normal;
@@ -271,29 +335,14 @@
   color: #3159c2;
 }
 
-.norek{
-  position: absolute;
-  width: 560px;
-  height: 50px;
-  left: 50px;
-  top: 125px;
 
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  /* identical to box height, or 118% */
-
-  color: #3159c2;
-}
 
 .penerima{
   position: absolute;
   width: 110px;
   height: 24px;
   left: 50px;
-  top: 175px;
+  top: 80px;
 
   font-family: "Open Sans";
   font-style: normal;
@@ -303,18 +352,24 @@
   color: #3159c2;
 }
 
-.nama-penerima{
+.inpe{
   position: absolute;
-  width: 560px;
-  height: 50px;
-  left: 50px;
-  top: 240px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #3159c2;
+    width: 350px;
+    height: 35px;
+    left: 50px;
+    top: 125px;
+  
+    color: #496ecb;
+    background: #d9d9d9;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px;
+    border-color: white;
 }
 
 .ket-jml{
@@ -322,7 +377,7 @@
   width: 400px;
   height: 24px;
   left: 50px;
-  top: 305px;
+  top: 180px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
@@ -331,26 +386,33 @@
   color: #3159c2;
 }
 
-.jml-bayar{
+.inpj{
   position: absolute;
-  width: 560px;
-  height: 50px;
-  left: 50px;
-  top: 355px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #3159c2;
+    width: 350px;
+    height: 35px;
+    left: 50px;
+    top: 225px;
+  
+    color: #496ecb;
+    background: #d9d9d9;
+    border-radius: 10px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px;
+    border-color: white;
 }
+
 
 .unggah{
   position: absolute;
   width: 300px;
   height: 24px;
   left: 50px;
-  top: 420px;
+  top: 280px;
 
   font-family: "Open Sans";
   font-style: normal;
@@ -367,20 +429,21 @@
   width: 90px;
   height: 23px;
   left: 50px;
-  top: 480px;
+  top: 340px;
+  
 }
 
 .confirm-btn{
   transition: all 0.3s;
   position: absolute;
-  width: 574px;
-  height: 58px;
+  width: 374px;
+  height: 45px;
   left: 50px;
-  top: 570px;
+  top: 400px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   border-color: white;
   color: white;
   background: #3159c2;

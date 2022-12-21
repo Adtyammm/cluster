@@ -35,7 +35,7 @@ function Penghuni() {
                 <Sidebar/>
             </div>
       <div className="con">
-        <h1 className="sh">Daftar Penghuni</h1>
+        <h1 className="sh4">Daftar Penghuni</h1>
         <table>
           <thead>
             <tr className="usp1">
@@ -78,7 +78,7 @@ function Penghuni() {
               })}
           </tbody>
         </table>
-        <a className="tph" href="/tambahpenghuni">
+        <a className="tph1" href="/tambahpenghuni">
           Tambah Penghuni
         </a>
       </div>

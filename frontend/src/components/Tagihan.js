@@ -4,8 +4,10 @@ class Tagihan extends React.Component{
     render() {
         return (
             <div className="tagihan-container">
-                <img className="logo" src="./img/logo.png" alt="logo"></img>
+                <img className="logos" src="./img/logo.png" alt="logo"></img>
+                <div className="hil">
                 <h1>Cluster Maul Hill</h1>
+                </div>
                 <div className="rincian">
                     <h2 className="rincian-title">Tagihan Bulanan</h2>
                     <p className="tagihan-air">Air</p>
@@ -30,15 +32,25 @@ class Tagihan extends React.Component{
                         <p className="Mandiri">Mandiri</p>
                         </li>
                     </ul>
+                    <ul>
+                        <li>
+                        <p className="BCAA"> 3014923048</p>
+                        </li>
+                        <li>
+                        <p className="BRII"> 2132014827</p>
+                        </li>
+                        <li>
+                        <p className="MANDIRII"> 0593382913</p>
+                        </li>
+                    </ul>
                 </div>
                 <div className="form-bayar">
                     <h2 className="bayar-title">Pembayaran</h2>
-                    <p className="rek">No rekening</p>
                     <p className="penerima">Nama</p>
-                    <input></input>
+                    <input name="nama_penerima" type="text" class="inpe" ></input>
                     <p className="ket-jml">Jumlah Pembayaran</p>
-                    <input></input>
-                    <p className="unggah">unggah bukti pembayaran</p>
+                    <input name="jmlh-pem" type="text" class="inpj" ></input>
+                    <p className="unggah">Unggah bukti pembayaran</p>
                         <input type="file" class="btn-2" id="file" />
                     <button className="confirm-btn">Konfirmasi Pembayaran</button>
                 </div>
