@@ -33,7 +33,7 @@ function Sidebar (){
             <Link to={"/penghuni"} className="type">Penghuni</Link>
             </li>
             <li className="ps">
-            <a href="https://app.crisp.chat/website/98cc1309-418c-489a-8647-47f3ac637891/inbox/" class="type">Pesan</a>
+            <Link to={"/Pesan"} className="type">Pesan</Link>
             </li>
             <li className="ber">
             <Link to={"/Berita"} className="type">Berita</Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../style/psn.css";
 import Sidebar from "./sidebar";
 
@@ -7,37 +7,53 @@ class Pesan extends React.Component {
   render() {
     return (
       <div className="body">
-        <div className="container">
-        <div className="sidebar">
-                <Sidebar/>
+            <div class="menu">
+            <Link to={"/Dashboard"} class="back"><i class="fa fa-angle-left"></i> <img src="https://cdn-icons-png.flaticon.com/512/8139/8139323.png" draggable="false"/></Link>
+            <div className="foto">
+            <img src="./chad.png"></img>
             </div>
-        <div className="head">
-          <div className="sp">
-            <h1> Pesan</h1>
-            <hr className="line"></hr>
-            <div className="lineh"></div>
+            <div class="name">Random chat</div>
+              <div class="name">Random chat</div>
+              <div class="members">
+                <b>You</b>, Marga, Charo & Brotons
+              </div>
+            </div>
+            <ol class="chat">
+              <li class="other">
+                <div class="msg">
+                  <div class="user">
+                    Marga<span class="range admin">Admin</span>
+                  </div>
+                  <p>Dude</p>
+                  <p>
+                    Want to go dinner? <emoji class="pizza"></emoji>
+                  </p>
+                  <time>20:17</time>
+                </div>
+              </li>
+              <li class="self">
+                <div class="msg">
+                  <p>Puff...</p>
+                  <p>
+                    I'm still doing the Góngora comment...{" "}
+                    <emoji class="books"></emoji>
+                  </p>
+                  <p>Better other day</p>
+                  <time>20:18</time>
+                </div>
+              </li>
+            </ol>
+            <div class="typezone">
+            
+              <form className="fr">
+              <input type="submit" class="krmw" value="" />
+                <textarea className="area" type="text" placeholder="Say something"></textarea>
+                
+              </form>
+              
+              <div class="emojis"></div>
+            </div>
           </div>
-        </div>
-        <div className="kontainer">
-          <div className="ava1">
-            <div className="av">
-              <img src="./Avatar.png" alt="" />
-            </div>
-            <div className="name1">
-              <p>Agus Handsome</p>
-            </div>
-          </div>
-          <div className="ava2">
-            <div className="av1">
-              <img src="./Avatar.png" alt="" />
-            </div>
-            <div className="name2">
-              <p>Adit Handsome</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
     );
   }
 }

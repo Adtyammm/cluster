@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams} from "react-router-dom";
 import Sidebar from "./sidebar";
 import "../style/eb.css"
+
 function Eberita() {
   const [judul, setjudul] = useState();
   const [isi, setisi] = useState();
