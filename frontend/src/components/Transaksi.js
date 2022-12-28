@@ -10,7 +10,6 @@ function Transaksi() {
   const [keamanan, setkeamanan]= useState();
   const [kebersihan, setkebersihan]= useState();
   const [status,setstatus]= useState();
-  const {id} = useParams();
 
 
   useEffect(() => {
@@ -27,12 +26,12 @@ function Transaksi() {
     })();
   }, []); 
 
-  async function approve(){
+  async function approve(id){
     try {
-        const result = await (await axios.post(`/api/pembayaran/approvebayar/${id}`)).data;
-        console.log(result)
+        const result = await axios.post(`/api/pembayaran/approvebayar/${id}`);
       } catch (error) {
         console.log(error);
+        console.log("ini id :",id )
       }
 }
 
@@ -96,7 +95,7 @@ function Transaksi() {
                   <td class="user">
                     
                     <img src={`http://localhost:5000/images/${pembayaran.image}`} width="50" height="20"/>
-                    <button class="terima" onClick={approve}>Terima</button>
+                    <button class="terima" onClick={() => approve(pembayaran._id)}>Terima</button>
                   </td>
                 </tr>
                 );

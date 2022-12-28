@@ -33,11 +33,12 @@ router.get('/getpembayaran', async (req,res)=>{
 
 router.post("/approvebayar/:id",async (req,res)=>{
     try{
-        const approve= await Pembayaran.findOne({_id: pembayaranid})
+        const approve= await Pembayaran.findById({_id:req.params.id})
         approve.status = "disetujui";
-        await approve.save();
+        approve.save();
+        res.status(201).json({message: "sukses"})
     }catch (error) {
-        return res.status(400).json({ error });
+        return res.status(400).json({ error: `ini error : ${error}` });
       }
 })
 module.exports = router;
