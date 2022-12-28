@@ -49,8 +49,7 @@ function Penghuni() {
             </tr>
           </thead>
           <tbody>
-            {penghuni &&
-              penghuni.map((penghuni, index) => {
+            {penghuni.map((penghuni, index) => {
                 return (
                   <tr className="trah">
                     <td className="user1">{index + 1}</td>

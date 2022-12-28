@@ -1,7 +1,42 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 import '../style/tagihan.css';
-class Tagihan extends React.Component{
-    render() {
+
+function Tagihan(){
+    const [tagihan,setTagihan] = useState([]);
+    const [nama,setNama] = useState([]);
+    const [jumlahbayar,setjumlahbayar] = useState([]);
+    const [image,setImage] = useState([]);
+    useEffect(() => {
+        (async () => {
+          try {
+            const getTagihan = await (
+              await axios.get("/api/tagihan/gettagihan")
+            ).data;
+            setTagihan(getTagihan);
+            console.log(getTagihan);
+          } catch (error) {
+            console.log(error);
+          }
+        })();
+      }, []); 
+
+      const pembayaran = async(e) =>{
+        e.preventDefault();
+        const formdata = new FormData();
+       formdata.append('nama',nama);
+       formdata.append('jumlahbayar',jumlahbayar);
+       formdata.append('image',image);
+        try{
+            await axios.post('/api/pembayaran/bayar', formdata);
+        }catch (error){
+            throw error;
+        }
+      }
+      const handlerimage = e =>{
+        setImage(e.target.files[0]);
+        console.log(image);
+    }
         return (
             <div className="tagihan-container">
                 <img className="logos" src="./img/logo.png" alt="logo"></img>
@@ -14,10 +49,17 @@ class Tagihan extends React.Component{
                     <p className="tagihan-keamanan">Keamanan</p>
                     <p className="tagihan-kebersihan">Kebersihan</p>
                     <p className="total">Total</p>
-                    <p className="harga-air">Rp 100.000</p>
-                    <p className="harga-keamanan">Rp 50.000</p>
-                    <p className="harga-kebersihan">Rp 50.000</p>
-                    <p className="harga-total">Rp 200.000</p>
+                    {tagihan.map((tagihan)=>{
+                        return(
+                            <>
+                            <p className="harga-air">Rp {tagihan.air}</p>
+                            <p className="harga-keamanan">Rp {tagihan.keamanan}</p>
+                            <p className="harga-kebersihan">Rp {tagihan.kebersihan}</p>
+                            <p className="harga-total">Rp 200.000</p>
+                            </>
+                        );
+                    })}
+                    
                 </div>
                 <div className="metode">
                     <h2 className="Metode-title">Metode Pembayaran</h2>
@@ -47,16 +89,16 @@ class Tagihan extends React.Component{
                 <div className="form-bayar">
                     <h2 className="bayar-title">Pembayaran</h2>
                     <p className="penerima">Nama</p>
-                    <input name="nama_penerima" type="text" class="inpe" ></input>
+                    <input name="nama_penerima" type="text" class="inpe" value={nama}  onChange={(e)=> setNama(e.target.value)} ></input>
                     <p className="ket-jml">Jumlah Pembayaran</p>
-                    <input name="jmlh-pem" type="text" class="inpj" ></input>
+                    <input name="jmlh-pem" type="text" class="inpj"value={jumlahbayar}  onChange={(e)=> setjumlahbayar(e.target.value)} ></input>
                     <p className="unggah">Unggah bukti pembayaran</p>
-                        <input type="file" class="btn-2" id="file" />
-                    <button className="confirm-btn">Konfirmasi Pembayaran</button>
+                        <input type="file" class="btn-2" id="file"  onChange={handlerimage}/>
+                    <button className="confirm-btn"  onClick={pembayaran}>Konfirmasi Pembayaran</button>
                 </div>
             </div>
         );
     }
-}
+
 
 export default Tagihan;

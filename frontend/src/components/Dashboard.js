@@ -32,7 +32,7 @@ function Dashboard() {
         <div class="tp">
               <div>
             <h2 class="tph">Total Penghuni</h2>
-            <p class="atph">{penghuni &&penghuni.length}</p>
+            <p class="atph">{penghuni && penghuni.length}</p>
             </div>
             <div className="bk"></div>
             <img src="img/Intersect.png" alt=""/>
