@@ -21,13 +21,4 @@ router.get('/gettagihan', async (req,res)=>{
       }
 })
 
-router.delete("/hapustagihan", async (req, res) => {
-    try {
-        const hapus = await Pembayaran.delete({});
-        res.status(200).json(hapus);
-    } catch (error) {
-        res.status(400).json({message: err});
-}
-});
-
 module.exports = router;

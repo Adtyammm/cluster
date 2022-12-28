@@ -55,7 +55,6 @@ function Tagihan(){
                             <p className="harga-air">Rp {tagihan.air}</p>
                             <p className="harga-keamanan">Rp {tagihan.keamanan}</p>
                             <p className="harga-kebersihan">Rp {tagihan.kebersihan}</p>
-                            <p className="harga-total">Rp 200.000</p>
                             </>
                         );
                     })}

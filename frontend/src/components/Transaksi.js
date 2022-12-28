@@ -2,13 +2,16 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "../style/tr.css";
 import Sidebar from "./sidebar";
-import { Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Transaksi() {
   const [pembayaran, setpembayaran]= useState();
   const [air, setair]= useState();
   const [keamanan, setkeamanan]= useState();
   const [kebersihan, setkebersihan]= useState();
+  const [status,setstatus]= useState();
+  const {id} = useParams();
+
 
   useEffect(() => {
     (async () => {
@@ -24,6 +27,15 @@ function Transaksi() {
     })();
   }, []); 
 
+  async function approve(){
+    try {
+        const result = await (await axios.post(`/api/pembayaran/approvebayar/${id}`)).data;
+        console.log(result)
+      } catch (error) {
+        console.log(error);
+      }
+}
+
   async function kirimtagihan(){
       const kirim={
           air,
@@ -33,9 +45,6 @@ function Transaksi() {
       console.log(kirim);
 
       try {
-        axios.delete("/api/tagihan/hapustagihan").then((res) => {
-          console.log(res);
-        });
           const tagihan = await (await axios.post("/api/tagihan/kirimtagihan", kirim)).data;
           console.log(tagihan)
         } catch (error) {
@@ -86,8 +95,8 @@ function Transaksi() {
                   <td class="stast">{pembayaran.status}</td>
                   <td class="user">
                     
-                    <button class="lihat">Lihat</button>
-                    <button class="terima">Terima</button>
+                    <img src={`http://localhost:5000/images/${pembayaran.image}`} width="50" height="20"/>
+                    <button class="terima" onClick={approve}>Terima</button>
                   </td>
                 </tr>
                 );

@@ -33,7 +33,7 @@ router.get('/getpembayaran', async (req,res)=>{
 
 router.post("/approvebayar/:id",async (req,res)=>{
     try{
-        const approve= await Pembayaran.findOne(req.params.id)
+        const approve= await Pembayaran.findOne({_id: pembayaranid})
         approve.status = "disetujui";
         await approve.save();
     }catch (error) {
